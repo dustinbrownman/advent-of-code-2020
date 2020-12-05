@@ -10,6 +10,9 @@ class Policy
   end
 
   def password_meets?(password)
+    # Part 1
+    # pass_min?(password) && pass_max?(password)
+    # Part 2
     character_at_min?(password) ^ character_at_max?(password)
   end
 

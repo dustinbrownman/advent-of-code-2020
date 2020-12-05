@@ -12,7 +12,7 @@ def trees_encountered(forest, slope)
   trees_encountered = 0
 
   while !forest[y].nil?
-    forest_line = forest[y].strip
+    forest_line = forest[y].strip # pesky newline characters
     repeat_point = forest_line.length
     current_space = forest_line[x % repeat_point]
 
@@ -39,5 +39,5 @@ encounter_counts = test_slopes.map do |slope|
   trees_encountered(input_forest, slope)
 end
 
-puts encounter_counts
+puts encounter_counts # gut check
 puts encounter_counts.inject(:*)
